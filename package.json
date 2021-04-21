@@ -1,0 +1,24 @@
+{
+  "name": "team6-vc",
+  "version": "1.0.0",
+  "description": "Team 6 - Virtual Currency App",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "standard-version": "^9.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Warreldie/team6-VC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Warreldie/team6-VC/issues"
+  },
+  "homepage": "https://github.com/Warreldie/team6-VC#readme"
+}
