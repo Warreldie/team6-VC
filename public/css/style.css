@@ -1,0 +1,39 @@
+body {
+  font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.page {
+  padding: 5rem;
+  background: transparent linear-gradient(119deg, #E9FFF0 0%, #CFC1EC 100%) 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+.brand {
+  text-align: right;
+}
+
+.dialog {
+  padding: 5rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn__signup {
+  background: #FBA2A2;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+/*# sourceMappingURL=style.css.map */

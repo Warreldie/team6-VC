@@ -1,11 +1,43 @@
 @import "components/btn";
 
+$lilac: #CFC1EC;
+$mint: #E9FFF0;
+
 body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: #00B7FF;
+  font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.page {
+    padding: 5rem;
+    background: transparent linear-gradient(119deg, $mint 0%, $lilac 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 100vh;
   }
-  
-  a {
-    color: #00B7FF;
+
+  .brand {
+    text-align: right;
   }
+
+  .dialog {
+    padding: 5rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #888888;
+  }
+
+  .signup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn__signup {
+    background: #FBA2A2;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 2px 2px 5px #888888;
+  }
+
