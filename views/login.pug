@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    div(class="auth login")
+        div(class="brand")
+            div(class="brand__container")
+                h1(class="brand__container-title") coins.
+                p(class="brand__container-sub") collab
+                p(class="brand__container-sub") appreciate
+                p(class="brand__container-sub") learn
+                p(class="brand__container-sub") earn
+                img(class="brand__container-logo" src="img/logo.svg")
+
+        div(class="dialog")
+            div(class="dialog__heading")
+                h1(class="dialog__heading-title") Login
+            
+            div(class="dialog__form")
+                label(for="username" class="dialog__form-label") Username
+                input(type="text" class="dialog__form-field" id="username")
+                label(for="password" class="dialog__form-label") Password
+                input(type="text" class="dialog__form-field" id="password")
+
+            div(class="dialog__links")
+                button(id="signup" class="dialog__links-btn btn") Sign in
+                span(class="dialog__links-text") Have an account?
+                    a(href="/register" class="dialog__links-link") Sign up

@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    div(class="auth register")
+        div(class="brand")
+            div(class="brand__container")
+                h1(class="brand__container-title") coins.
+                p(class="brand__container-sub") collab
+                p(class="brand__container-sub") appreciate
+                p(class="brand__container-sub") learn
+                p(class="brand__container-sub") earn
+                img(class="brand__container-logo" src="img/logo.svg")
+
+        div(class="dialog")
+            div(class="dialog__heading")
+                h1(class="dialog__heading-title") Register
+                p(class="dialog__heading-sub") Receive 100 free tokens to get you started!
+
+            div(class="dialog__form")
+                label(for="username" class="dialog__form-label") Username
+                input(type="text" class="dialog__form-field" id="username")
+                label(for="email" class="dialog__form-label") Email
+                input(type="text" class="dialog__form-field" id="email")
+                label(for="password" class="dialog__form-label") Password
+                input(type="text" class="dialog__form-field" id="password")
+                label(for="repeatPassword" class="dialog__form-label") Repeat password
+                input(type="text" class="dialog__form-field" id="repeatPassword") 
+
+            div(class="dialog__links")
+                button(id="signup" class="dialog__links-btn btn") Sign up
+                span(class="dialog__links-text") Have an account?
+                    a(href="/login" class="dialog__links-link") Sign in

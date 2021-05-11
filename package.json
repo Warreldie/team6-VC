@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "./node_modules/.bin/nodemon ./bin/www"
+    "start": "./node_modules/.bin/nodemon ./bin/www",
+    "sass": "./node_modules/.bin/sass --watch ./source/app.scss:./public/css/style.css"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

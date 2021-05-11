@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+body {
+  font: 0.9rem "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+.auth {
+  background: transparent linear-gradient(119deg, #e9fff0 0%, #cfc1ec 100%) 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 90vh;
+  padding: 5vh;
+  overflow-y: hidden;
+}
+
+.brand__container {
+  text-align: right;
+  color: white;
+  padding-right: 3vw;
+  padding-top: 3vh;
+  position: relative;
+}
+.brand__container .brand__container-logo {
+  width: 80vw;
+  opacity: 0.5;
+  position: absolute;
+  left: -60vw;
+  top: -10vh;
+}
+
+p.brand__container-sub {
+  margin: 5px;
+}
+p.dialog__heading-sub {
+  margin-bottom: 5vh;
+}
+
+.dialog {
+  background: #fefefe;
+  border-radius: 20px;
+  box-shadow: 3px 3px 11px #00000029;
+  text-align: center;
+  width: 25vw;
+  padding: 3vh 5vw;
+  margin-right: 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dialog .dialog__form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.dialog .dialog__links {
+  display: flex;
+  flex-direction: column;
+}
+.dialog .dialog__links .dialog__links-btn {
+  align-self: center;
+  display: inline-block;
+  background: #ff8a70;
+  border: none;
+  padding: 10px;
+  margin-top: calc(5vh + 10px);
+  border-radius: 5px;
+  color: #fefefe;
+  box-shadow: 3px 3px 11px #00000029;
+}
+.dialog .dialog__links .dialog__links-text {
+  font-size: 0.7rem;
+  padding-top: 0.5rem;
+}
+.dialog .dialog__links .dialog__links-text .dialog__links-link {
+  text-decoration: none;
+  color: #cfc1ec;
+  padding-left: 5px;
+  font-weight: 900;
+}
+.dialog .dialog__links .dialog__links-text :hover {
+  opacity: 0.8;
+}
+
+label.dialog__form-label {
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+h1 {
+  font-weight: 600;
+}
+h1.brand__container-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+h1.dialog__title {
+  margin-bottom: 0;
+}
+
+input {
+  border: none;
+  box-shadow: 3px 3px 11px #00000029;
+  height: 2.5rem;
+  border-radius: 8px;
+  padding: 0 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
