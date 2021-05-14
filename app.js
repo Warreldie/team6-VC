@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 const mongoose = require('mongoose');
+mongoose.set('useCreateIndex', true);
 mongoose.connect('mongodb://localhost:27017/imd-virtualcurrency', {useNewUrlParser: true, useUnifiedTopology: true});
 
 var app = express();
