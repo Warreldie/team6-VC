@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const authController = require('../controllers/api/auth');
+const authController = require('../controllers/auth');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
