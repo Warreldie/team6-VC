@@ -4,7 +4,7 @@ const transfersController = require('../controllers/transfers');
 
 // register
 router.get('/', function(req, res, next) {
-  res.render('register', { title: 'coins. | Register' });
+  res.render('index', { title: 'coins. | Register' });
 });
 
 router.post('/create', transfersController.create);
