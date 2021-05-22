@@ -22,6 +22,6 @@ const create = async (req, res, next) => {
             'status': 'error'
         })
     })
-}
+};
 
 module.exports.create = create;
