@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 var app = express();
+var config = require('config');
 
 app.use(cors());
 
@@ -14,7 +15,7 @@ var transfersRouter = require('./routes/transfers');
 
 const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
-mongoose.connect('mongodb://localhost:27017/imd-virtualcurrency', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(config.get('Database.conn'), {useNewUrlParser: true, useUnifiedTopology: true});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
