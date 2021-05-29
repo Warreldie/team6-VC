@@ -15,10 +15,13 @@ body {
 
 .brand__container {
   text-align: right;
-  color: white;
+  color: black;
   padding-right: 3vw;
   padding-top: 3vh;
   position: relative;
+}
+.brand__container .brand__container-logout {
+  color: #ff8a70;
 }
 .brand__container .brand__container-logo {
   width: 80vw;
@@ -39,24 +42,78 @@ p.dialog__heading-sub {
   background: #fefefe;
   border-radius: 20px;
   box-shadow: 3px 3px 11px #00000029;
-  text-align: center;
-  width: 25vw;
-  padding: 3vh 5vw;
+  width: 60vw;
+  padding: 5vh 1vw;
   margin-right: 8vw;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.dialog .dialog__heading-sub {
+  background: transparent linear-gradient(119deg, #e9fff0 0%, #cfc1ec 100%) 0% 0% no-repeat padding-box;
+  border: none;
+  box-shadow: 3px 3px 11px #00000029;
+  border-radius: 8px;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dialog .dialog__heading-sub span {
+  font-size: 10rem;
+  justify-content: end;
+  align-content: flex-end;
+}
+.dialog .dialog__heading__transfer {
+  border: none;
+  box-shadow: 3px 3px 11px #00000029;
+  height: 2.5rem;
+  border-radius: 8px;
+  padding-bottom: 5px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
 }
 .dialog .dialog__form {
   display: flex;
   flex-direction: column;
   justify-items: center;
+  margin-top: 100px;
 }
-.dialog .dialog__links {
+.dialog .dialog__form .dialog__form-title {
+  color: #cfc1ec;
+  font-size: 1.5rem;
+}
+.dialog .dialog__form .dialog__form-field {
+  border: none;
+  box-shadow: 3px 3px 11px #00000029;
+  height: 2.5rem;
+  border-radius: 8px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+.dialog .dialog__form .dialog__form-text {
+  border: none;
+  box-shadow: 3px 3px 11px #00000029;
+  height: 2.5rem;
+  border-radius: 8px;
+  padding: 50px;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+.dialog .dialog__form .dialog__form__links {
   display: flex;
   flex-direction: column;
 }
-.dialog .dialog__links .dialog__links-btn {
+.dialog .dialog__form .dialog__form__links .dialog__form__links-btn {
   align-self: center;
   display: inline-block;
   background: #ff8a70;
@@ -67,26 +124,13 @@ p.dialog__heading-sub {
   color: #fefefe;
   box-shadow: 3px 3px 11px #00000029;
 }
-.dialog .dialog__links .dialog__links-text {
-  font-size: 0.7rem;
-  padding-top: 0.5rem;
-}
-.dialog .dialog__links .dialog__links-text .dialog__links-link {
-  text-decoration: none;
-  color: #cfc1ec;
-  padding-left: 5px;
-  font-weight: 900;
-}
-.dialog .dialog__links .dialog__links-text :hover {
-  opacity: 0.8;
-}
 
 label.dialog__form-label {
   text-align: left;
   margin-top: 15px;
   margin-bottom: 5px;
   font-weight: 500;
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 h1 {

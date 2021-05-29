@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coins.</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+</head>
+
+<body>
+    <div class="auth index">
+        <div class="brand">
+            <div class="brand__container">
+                <h1 class="brand__container-title">coins.</h1>
+                <p class="brand__container-sub">collab</p>
+                <p class="brand__container-sub">appreciate</p>
+                <p class="brand__container-sub">learn</p>
+                <p class="brand__container-sub">earn</p>
+                <p class="brand__container-logout">logout</p>
+                <!--<p class="brand__container-logout"><a href="login.html">logout</a></p>-->
+                <img class="brand__container-logo" src="img/logo.svg" />
+            </div>
+        </div>
+        <div class="dialog">
+            <div class="dialog__heading">
+                <h1 class="dialog__heading-title">Hi, Medina!</h1>
+                <p class="dialog__heading-sub">Your saldo <span>10</span></p>
+                <div class="dialog__heading__transfer">
+                    <p class="dialog__heading__transfer-date">23/05/2021</p>
+                    <p class="dialog__heading__transfer-name">John Doe</p>
+                    <p class="dialog__heading__transfer-amout">+ 5 tokens</p>
+                </div>
+                <div class="dialog__heading__transfer">
+                    <p class="dialog__heading__transfer-date">23/05/2021</p>
+                    <p class="dialog__heading__transfer-name">John Doe</p>
+                    <p class="dialog__heading__transfer-amout">+ 5 tokens</p>
+                </div>
+                <div class="dialog__heading__transfer">
+                    <p class="dialog__heading__transfer-date">23/05/2021</p>
+                    <p class="dialog__heading__transfer-name">John Doe</p>
+                    <p class="dialog__heading__transfer-amout">+ 5 tokens</p>
+                </div>
+                <div class="dialog__heading__transfer">
+                    <p class="dialog__heading__transfer-date">23/05/2021</p>
+                    <p class="dialog__heading__transfer-name">John Doe</p>
+                    <p class="dialog__heading__transfer-amout">+ 5 tokens</p>
+                </div>
+            </div>
+            <div class="dialog__form">
+                <h1 class="dialog__form-title">Spread the love, send coins!</h1>
+                
+                <input class="dialog__form-field" type="text" oninput=searchUser(this.value) id="recipient" placeholder="&#128269; search a user" />
+
+                <label class="dialog__form-label" for="reason">Select a reason</label>
+                <select class="dialog__form-field" name="reason" id="reason">
+                    <option value="dev">Development help</option>
+                    <option value="design">Design help</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="deadline">Meeting deadlines</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label class="dialog__form-label" for="amount">Amount</label>
+                <input class="dialog__form-field" type="number" name="amount" id="amount">
+
+                <textarea class="dialog__form-text" name="message" id="message" cols="30" rows="10"
+                placeholder="Leave a nice message :)"></textarea>
+                <div class="dialog__form__links">
+                    <button class="dialog__form__links-btn btn" type="submit" id="submitTransfer">Send coins</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/transfer.js"></script>
+</body>
+
+</html>
