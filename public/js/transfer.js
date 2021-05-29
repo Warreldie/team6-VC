@@ -1,21 +1,19 @@
 function searchUser(searchUser) {
-    console.log(searchUser);
     fetch('http://localhost:3000/users/search', {
-        method: 'POST',
+        method: "post",
         headers: {
             "content-type": "application/json"
         },
         body: JSON.stringify({
-            "username": searchUser
+            "query": searchUser
         })
+    }).then(result => {
+        return result.json();
+    }).then(json => {
+        console.log(json);
+    }).catch(err => {
+        console.log(err);
     })
-        .then(result => {
-            return result.json();
-        }).then(json => {
-            console.log(json);
-        }).catch(err => {
-            console.log(err);
-        })
 }
 
 let submitTransfer = document.getElementById("submitTransfer").addEventListener('click', e => {
