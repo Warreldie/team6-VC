@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const authController = require('../controllers/auth');
+const usersController = require('../controllers/users');
 
 // register
 router.get('/register', function(req, res, next) {
@@ -15,5 +16,7 @@ router.get('/login', function(req, res, next) {
 });
 
 // router.post('/login', authController.signin);
+
+router.get('/search', usersController.search);
 
 module.exports = router;
