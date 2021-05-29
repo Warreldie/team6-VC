@@ -10,7 +10,9 @@ function searchUser(searchUser) {
     }).then(result => {
         return result.json();
     }).then(json => {
-        console.log(json);
+        json.users.forEach(user => {
+            console.log(user['user'])
+        })
     }).catch(err => {
         console.log(err);
     })

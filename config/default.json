@@ -1,6 +1,6 @@
 {
     "Database": {
-        "conn": "mongodb://localhost:27017/imd-virtualcurrency"
+        "conn": "mongodb+srv://team6-vc:ACAo9fKucryEFgUs@imd-virtualcurrency.vvjwx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
     },
     "jwt": {
         "secret": "secretWord"
