@@ -15,7 +15,7 @@ const search = async (req, res, next) => {
                 if(users && users.length && users.length > 0){
                     users.forEach(user => {
                         let obj = {
-                            id: user.username
+                            user: user.username
                         };
                         output.push(obj);
                     })
