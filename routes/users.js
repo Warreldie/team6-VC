@@ -17,6 +17,6 @@ router.get('/login', function(req, res, next) {
 
 // router.post('/login', authController.signin);
 
-router.get('/search', usersController.search);
+router.post('/search', usersController.search);
 
 module.exports = router;
