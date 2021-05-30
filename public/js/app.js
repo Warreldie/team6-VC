@@ -3,7 +3,7 @@ const baseUrl = "https://virtualcurrency-app.herokuapp.com/";
 let newSaldo;
 
 let getUser = () => {
-    fetch(baseUrl + "/users/user", {
+    fetch(baseUrl + "users/user", {
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('token')
         }
@@ -22,7 +22,7 @@ let getUser = () => {
 }
 
 let getSaldo = () => {
-    fetch(baseUrl + "/transfers/saldo", {
+    fetch(baseUrl + "transfers/saldo", {
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('token')
         }
