@@ -30,8 +30,6 @@ const search = async (req, res, next) => {
 };
 
 const getUser = async (req, res) => {
-    console.log(req.user);
-
     return res.json({
         "status": "success",
         "user": {

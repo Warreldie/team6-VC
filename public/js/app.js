@@ -18,4 +18,18 @@ let getUser = () => {
     });
 }
 
+let getSaldo = () => {
+    fetch(baseUrl + "/transfers/saldo", {
+        'headers': {
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
+        }
+    }).then(result => {
+        return result.json();
+    }).then(json => {
+    }).catch(err => {
+        console.log(err);
+    });
+}
+
 getUser();
+getSaldo();

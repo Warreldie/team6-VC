@@ -32,7 +32,8 @@ let submitTransfer = document.getElementById("submitTransfer").addEventListener(
     fetch('http://localhost:3000/transfers/create', {
         method: "post",
         headers: {
-            "content-type": "application/json"
+            "content-type": "application/json",
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
         },
         body: JSON.stringify({
             "recipient": recipient,
