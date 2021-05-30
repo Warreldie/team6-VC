@@ -15,6 +15,7 @@ let getUser = () => {
         tokens.innerHTML = json.user["tokens"];
     }).catch(err => {
         console.log(err);
+        window.location.href = "login.html";
     });
 }
 
