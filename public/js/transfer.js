@@ -16,6 +16,8 @@ function searchUser(searchUser) {
             console.log(user['user']);
             let userList = `<div class="dialog__form-list"><ul><li>${user['user']}</li></ul>`;
 
+            
+
             userSearch.insertAdjacentHTML('afterend', userList);
         })
     }).catch(err => {

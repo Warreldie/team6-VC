@@ -13,17 +13,17 @@ body {
   overflow-y: hidden;
 }
 
-.brand__container {
+.container--brand {
   text-align: right;
   color: black;
   padding-right: 3vw;
   padding-top: 3vh;
   position: relative;
 }
-.brand__container .brand__container-logout {
+.container--brand .brand__container-logout {
   color: #ff8a70;
 }
-.brand__container .brand__container-logo {
+.container--brand .brand__container-logo {
   width: 80vw;
   opacity: 0.5;
   position: absolute;
