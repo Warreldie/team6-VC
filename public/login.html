@@ -11,28 +11,28 @@
   <body>
     <div class="auth login">
       <div class="brand">
-        <div class="brand__container">
-          <h1 class="brand__container-title">coins.</h1>
-          <p class="brand__container-sub">collab</p>
-          <p class="brand__container-sub">appreciate</p>
-          <p class="brand__container-sub">learn</p>
-          <p class="brand__container-sub">earn</p>
-          <img class="brand__container-logo" src="img/logo.svg" />
+        <div class="container container__brand">
+          <h1 class="brand__title">coins.</h1>
+          <p class="brand__sub">collab</p>
+          <p class="brand__sub">appreciate</p>
+          <p class="brand__sub">learn</p>
+          <p class="brand__sub">earn</p>
+          <img class="brand__logo" src="./img/logo.svg" />
         </div>
       </div>
       <div class="dialog">
-        <div class="dialog__heading">
-          <h1 class="dialog__heading-title">Login</h1>
+        <div class="container container__dialog">
+          <h1 class="dialog__title">Login</h1>
+          <p class="dialog__sub"></p>
         </div>
         <div class="dialog__form">
-          <label class="dialog__form-label" for="username">Username</label>
-          <input class="dialog__form-field" type="text" id="username" />
-          <label class="dialog__form-label" for="password">Password</label>
-          <input class="dialog__form-field" type="text" id="password" />
-        </div>
+          <label class="form__label--dialog" for="username">Username</label>
+          <input class="form__field--dialog" type="text" id="username" />
+          <label class="form__label--dialog" for="password">Password</label>
+          <input class="form__field--dialog" type="text" id="password" />
         <div class="dialog__links">
-          <button class="dialog__links-btn btn" id="signup">Sign in</button>
-          <span class="dialog__links-text">Have an account?<a class="dialog__links-link" href="register.html">Sign up</a></span>
+          <button class="btn dialog__btn btn--submit" id="signup">Sign in</button>
+          <span class="dialog__links-text links links--switch">Have an account?<a class="dialog__links-link" href="register.html">Sign up</a></span>
         </div>
       </div>
     </div>
