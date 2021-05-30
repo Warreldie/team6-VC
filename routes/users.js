@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var passport = require('../passport/passport');
 const authController = require('../controllers/auth');
 const usersController = require('../controllers/users');
 
@@ -22,6 +23,6 @@ router.post('/search', usersController.search);
 
 
 // get user
-router.get('/user', usersController.getUser);
+router.get('/user', passport.authenticate('jwt', {session: false}), usersController.getUser);
 
 module.exports = router;

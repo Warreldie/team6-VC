@@ -30,7 +30,8 @@ const search = async (req, res, next) => {
 };
 
 const getUser = async(req, res) => {
-
+    let user = req.user._id;
+    console.log(user);
 }
 
 module.exports.search = search;
