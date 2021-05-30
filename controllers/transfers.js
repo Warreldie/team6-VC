@@ -65,4 +65,3 @@ const calcSaldo = async (req, res) => {
 
 module.exports.create = create;
 module.exports.calcSaldo = calcSaldo;
-module.exports.updateSaldo = updateSaldo;
