@@ -8,7 +8,8 @@ let getUser = () => {
     }).then(result => {
         return result.json();
     }).then(json => {
-        console.log(json);
+        let username = document.getElementById('username');
+        username.innerHTML = json.user["username"];
     }).catch(err => {
         console.log(err);
     });
