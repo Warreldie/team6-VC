@@ -48,16 +48,11 @@ const calcSaldo = async (req, res) => {
             }
         })
 
-        console.log(gain);
-        console.log(loss)
-
         total = req.user.tokens + gain - loss;
 
-        console.log(total);
-
         res.json({
-            'status': 'fetched',
-            'data': result
+            'status': 'success',
+            'data': total
         })
     }).catch(error => {
         res.json({

@@ -27,6 +27,8 @@ let getSaldo = () => {
     }).then(result => {
         return result.json();
     }).then(json => {
+        let tokens = document.getElementById('tokens');
+        tokens.innerHTML = json.data;
     }).catch(err => {
         console.log(err);
     });
