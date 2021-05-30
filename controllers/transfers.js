@@ -63,26 +63,6 @@ const calcSaldo = async (req, res) => {
     });
 }
 
-const updateSaldo = async (req, res) => {
-    let newSaldo = req.body.newSaldo;
-
-    User.findOneAndUpdate(
-        { username: username },
-        { tokens: newSaldo },
-        { new: true }
-    ).then(result => {
-        res.json({
-            'status': 'success',
-            'data': result
-        })
-    }).catch(error => {
-        res.json({
-            "status": "error",
-            "message": error
-        })
-    });
-}
-
 module.exports.create = create;
 module.exports.calcSaldo = calcSaldo;
 module.exports.updateSaldo = updateSaldo;
