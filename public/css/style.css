@@ -36,6 +36,12 @@ input {
   justify-items: center;
 }
 
+.error {
+  visibility: hidden;
+  color: red;
+  font-weight: bold;
+}
+
 body {
   font: 0.9rem "Montserrat", Helvetica, Arial, sans-serif;
 }

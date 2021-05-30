@@ -20,6 +20,9 @@ let submitLogin = document.getElementById("submitLogin").addEventListener('click
                 let token = json.data.token;
                 localStorage.setItem('token', token);
                 window.location.href = "index.html";
+            } else {
+                let error = document.querySelector('.error--login');
+                error.style.visibility = "visible";
             }
         }).catch(err => {
             console.log(err);
