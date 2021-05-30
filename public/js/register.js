@@ -18,7 +18,11 @@ let submitRegister = document.getElementById("submitRegister").addEventListener(
         }).then(result => {
             return result.json();
         }).then(json => {
-            console.log(json);
+            if(json.status === "success"){
+                let token = json.data.token;
+                localStorage.setItem('token', token);
+                window.location.href = "index.html";
+            }
         }).catch(err => {
             console.log(err);
         })
