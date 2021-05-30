@@ -1,5 +1,5 @@
 function searchUser(searchUser) {
-  fetch("http://localhost:3000/users/search", {
+  fetch("https://virtualcurrency-app.herokuapp.com/users/search", {
     method: "post",
     headers: {
       "content-type": "application/json",
@@ -34,7 +34,7 @@ let submitTransfer = document
     let message = document.getElementById("message").value;
     let amount = document.getElementById("amount").value;
 
-    fetch("http://localhost:3000/transfers/create", {
+    fetch("https://virtualcurrency-app.herokuapp.com/transfers/create", {
       method: "post",
       headers: {
         "content-type": "application/json",

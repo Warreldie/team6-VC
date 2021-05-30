@@ -3,7 +3,7 @@ let submitLogin = document.getElementById("submitLogin").addEventListener('click
     let password = document.getElementById("password").value;
 
     if (username != "" && password != "") {
-        fetch('http://localhost:3000/users/login', {
+        fetch('https://virtualcurrency-app.herokuapp.com/users/login', {
             method: "post",
             headers: {
                 "content-type": "application/json"

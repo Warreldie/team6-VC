@@ -5,7 +5,7 @@ let submitRegister = document.getElementById("submitRegister").addEventListener(
     let repeatPassword = document.getElementById("repeatPassword").value;
 
     if (username != "" && (password != "" && password == repeatPassword) && email.endsWith("@student.thomasmore.be")) {
-        fetch('http://localhost:3000/users/register', {
+        fetch('https://virtualcurrency-app.herokuapp.com/users/register', {
             method: "post",
             headers: {
                 "content-type": "application/json"
