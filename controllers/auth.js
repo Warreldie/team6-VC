@@ -7,7 +7,7 @@ const signup = async (req, res, next) => {
     let email = req.body.email;
     let password = req.body.password;
     let tokens = 100;
-    
+
     const user = new User({
         username: username,
         email: email,
@@ -33,15 +33,27 @@ const signup = async (req, res, next) => {
     })
 };
 
-const login = async (req, res, next)=>{
-    const user = await User.authenticate()(req.body.username, req.body.password).then(result =>{
-        res.json({
+const login = async (req, res, next) => {
+    const user = await User.authenticate()(req.body.username, req.body.password).then(result => {
+        if (!result.user) {
+            res.json({
+                "status": "failed",
+                "message": "login failed"
+            })
+        }
+
+        let token = jwt.sign({
+            uid: result.user._id,
+            username: result.user.username
+        }, config.get('jwt.secret'));
+
+        return res.json({
             "status": "succes",
             "data": {
-                "user": result
+                "token": token
             }
         })
-    }).catch(error =>{
+    }).catch(error => {
         res.json({
             "status": "error",
             "message": error
