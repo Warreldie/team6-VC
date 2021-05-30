@@ -10,6 +10,9 @@ let getUser = () => {
     }).then(json => {
         let username = document.getElementById('username');
         username.innerHTML = json.user["username"];
+
+        let tokens = document.getElementById('tokens');
+        tokens.innerHTML = json.user["tokens"];
     }).catch(err => {
         console.log(err);
     });
