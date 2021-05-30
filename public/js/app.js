@@ -33,7 +33,6 @@ let getSaldo = () => {
         console.log(json);
         let tokens = document.getElementById('tokens');
         tokens.innerHTML = json.data;
-        updateSaldo(newSaldo);
     }).catch(err => {
         console.log(err);
     });
