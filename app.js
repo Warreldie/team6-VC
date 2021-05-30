@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cors = require('cors');
 var app = express();
 var config = require('config');
+var passport = require('./passport/passport');
 
 app.use(cors());
 
@@ -29,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/transfers', transfersRouter);
+app.use('/transfers', passport.authenticate('jwt', {session: false}), transfersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
