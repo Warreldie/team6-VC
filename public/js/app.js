@@ -4,7 +4,7 @@ let newSaldo;
 
 let getUser = () => {
     fetch(baseUrl + "/users/user", {
-        'headers': {
+        headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('token')
         }
     }).then(result => {
@@ -23,7 +23,7 @@ let getUser = () => {
 
 let getSaldo = () => {
     fetch(baseUrl + "/transfers/saldo", {
-        'headers': {
+        headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('token')
         }
     }).then(result => {
