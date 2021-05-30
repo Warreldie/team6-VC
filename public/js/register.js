@@ -28,9 +28,20 @@ let submitRegister = document.getElementById("submitRegister").addEventListener(
         })
 
         e.preventDefault();
-    } else if(!email.endsWith("@student.thomasmore.be")) {
-        let emailError = document.querySelector('.label--email');
-        emailError.innerHTML = "Please enter a Thomas More student email";
-        emailError.style.color = "red";
+    } else {
+        if(!email.endsWith("@student.thomasmore.be")) {
+            let emailError = document.querySelector('.label--email');
+            emailError.innerHTML = "Please enter a Thomas More student email";
+            emailError.style.color = "red";
+        }
+        if (password != repeatPassword){
+            let passwordRepeatError = document.querySelector('.label--password');
+            passwordRepeatError.innerHTML = "Passwords do not match";
+            passwordRepeatError.style.color = "red";
+        }
+        if(username == "" || email == "" || password == ""){
+            let error = document.querySelector('.error--register');
+            error.style.visibility = "visible";
+        }
     }
 })
