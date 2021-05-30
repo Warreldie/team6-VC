@@ -28,5 +28,9 @@ let submitRegister = document.getElementById("submitRegister").addEventListener(
         })
 
         e.preventDefault();
+    } else if(!email.endsWith("@student.thomasmore.be")) {
+        let emailError = document.querySelector('.label--email');
+        emailError.innerHTML = "Please enter a Thomas More student email";
+        emailError.style.color = "red";
     }
 })
