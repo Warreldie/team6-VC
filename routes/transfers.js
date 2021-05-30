@@ -4,9 +4,7 @@ const transfersController = require('../controllers/transfers');
 var passport = require('../passport/passport');
 
 // register
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'coins. | Register' });
-});
+router.get('/', transfersController.getAll);
 
 router.post('/create', passport.authenticate('jwt', {session: false}), transfersController.create);
 

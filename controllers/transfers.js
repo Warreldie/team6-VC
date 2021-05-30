@@ -68,6 +68,21 @@ const calcSaldo = async (req, res) => {
     //     }
     // });
 }
-
+const getAll = async (req, res) => {
+    Transfer.find((err, docs) =>{
+        if(!err){
+        res.json({
+            'status': 'succes',
+            'data': docs
+        });
+    }else{
+        res.json({
+            "status": "error",
+            "message": error
+        });
+    }
+    });
+};
 module.exports.create = create;
 module.exports.calcSaldo = calcSaldo;
+module.exports.getAll = getAll;
