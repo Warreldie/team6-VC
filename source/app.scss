@@ -126,6 +126,7 @@ input {
     position: absolute;
     left: -60vw;
     top: -10vh;
+    z-index: 0;
   }
 }
 p {
@@ -147,6 +148,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  z-index: 3;
 
   .overview__heading-sub {
     background: transparent linear-gradient(119deg, $mint 0%, $lilac 100%) 0% 0%

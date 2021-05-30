@@ -152,6 +152,7 @@ input {
   position: absolute;
   left: -60vw;
   top: -10vh;
+  z-index: 0;
 }
 
 p.brand__container-sub {
@@ -171,6 +172,7 @@ p.overview__heading-sub {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  z-index: 3;
 }
 .overview .overview__heading-sub {
   background: transparent linear-gradient(119deg, #e9fff0 0%, #cfc1ec 100%) 0% 0% no-repeat padding-box;
