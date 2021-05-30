@@ -258,6 +258,63 @@ p.overview__heading-sub {
   box-shadow: 3px 3px 11px #00000029;
 }
 
-/* index styling */
+/* Tranfer styling */
+.form {
+  background: #fefefe;
+  border-radius: 20px;
+  box-shadow: 3px 3px 11px #00000029;
+  text-align: center;
+  width: 75vw;
+  height: 100%;
+  padding: 3vh 5vw;
+  padding-bottom: 5vw;
+  margin-right: 8vw;
+  display: flex;
+  flex-direction: column;
+}
+.form .form__heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form .form__heading .form__heading-back {
+  align-self: center;
+  justify-self: flex-start;
+  font-size: 2rem;
+}
+.form .form__heading :hover {
+  opacity: 0.8;
+}
+.form .form__heading .form__heading-title {
+  align-self: center;
+}
+.form .form__heading .form__heading-btn {
+  justify-self: flex-end;
+  align-self: center;
+  background: #cfc1ec;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fefefe;
+  box-shadow: 3px 3px 11px #00000029;
+}
+.form .form__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: none;
+  box-shadow: 3px 3px 11px #00000029;
+  height: 2.5rem;
+  border-radius: 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 10px;
+}
+.form .form__content .form__content-sub {
+  align-self: center;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
 
 /*# sourceMappingURL=style.css.map */
