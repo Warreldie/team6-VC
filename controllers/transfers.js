@@ -28,7 +28,6 @@ const create = async (req, res) => {
 };
 
 const calcSaldo = async (req, res) => {
-    console.log(req.user);
     let username = req.user.username;
 
     Transfer.find({
@@ -37,7 +36,24 @@ const calcSaldo = async (req, res) => {
             { recipient: username }
         ]
     }).then(result => {
-        console.log(result);
+        let gain = 0;
+        let loss = 0;
+        let total = 0;
+
+        result.forEach(token => {
+            if(token.sender == username){
+                loss += token.amount;
+            } else if(token.recipient == username){
+                gain += token.amount;
+            }
+        })
+
+        console.log(gain);
+        console.log(loss)
+
+        total = req.user.tokens + gain - loss;
+
+        console.log(total);
 
         res.json({
             'status': 'fetched',
