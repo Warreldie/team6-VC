@@ -1,11 +1,17 @@
-fetch("http://localhost:3000/", {
-    'headers': {
-        'Authorization': 'Bearer ' + localStorage.getItem('token')
-    }
-}).then(result => {
-    return result.json();
-}).then(json => {
-    console.log(json)
-}).catch(err => {
-    console.log("fail")
-})
+const baseUrl = "http://localhost:3000";
+
+let getUser = () => {
+    fetch(baseUrl + "/users/user", {
+        'headers': {
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
+        }
+    }).then(result => {
+        return result.json();
+    }).then(json => {
+        console.log(json);
+    }).catch(err => {
+        console.log(err);
+    });
+}
+
+getUser();

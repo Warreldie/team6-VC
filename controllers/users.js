@@ -29,9 +29,17 @@ const search = async (req, res, next) => {
             })
 };
 
-const getUser = async(req, res) => {
-    let user = req.user._id;
-    console.log(user);
+const getUser = async (req, res) => {
+    console.log(req.user);
+
+    return res.json({
+        "status": "success",
+        "user": {
+            "id": req.user._id,
+            "username": req.user.username,
+            "tokens": req.user.tokens
+        }
+    });
 }
 
 module.exports.search = search;
