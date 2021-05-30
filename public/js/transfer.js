@@ -10,13 +10,11 @@ function searchUser(searchUser) {
     }).then(result => {
         return result.json();
     }).then(json => {
-        let userSearch = document.querySelector('.dialog__form-field');
+        let userSearch = document.querySelector('.overview__form-field');
 
         json.users.forEach(user => {
             console.log(user['user']);
-            let userList = `<div class="dialog__form-list"><ul><li>${user['user']}</li></ul>`;
-
-            
+            let userList = `<div class=".overview__form-list"><ul><li>${user['user']}</li></ul>`;
 
             userSearch.insertAdjacentHTML('afterend', userList);
         })
