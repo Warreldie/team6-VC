@@ -1,4 +1,5 @@
 const Transfer = require('../models/Transfer');
+const User = require('../models/User');
 
 const create = async (req, res) => {
     let sender = req.user.username;
@@ -41,9 +42,9 @@ const calcSaldo = async (req, res) => {
         let total = 0;
 
         result.forEach(token => {
-            if(token.sender == username){
+            if (token.sender == username) {
                 loss += token.amount;
-            } else if(token.recipient == username){
+            } else if (token.recipient == username) {
                 gain += token.amount;
             }
         })
@@ -60,25 +61,28 @@ const calcSaldo = async (req, res) => {
             "message": error
         })
     });
+}
 
+const updateSaldo = async (req, res) => {
+    let newSaldo = req.body.newSaldo;
 
-    // let search = {
-    //     "$or": [{ "username": { "$regex": query, "$options": "i" } }]
-    // }
-
-    // let output = [];
-
-    // User.find(search).limit(3); 
-
-    // return res.json({
-    //     "status": "success",
-    //     "user": {
-    //         "id": req.user._id,
-    //         "username": req.user.username,
-    //         "tokens": req.user.tokens
-    //     }
-    // });
+    User.findOneAndUpdate(
+        { username: username },
+        { tokens: newSaldo },
+        { new: true }
+    ).then(result => {
+        res.json({
+            'status': 'success',
+            'data': result
+        })
+    }).catch(error => {
+        res.json({
+            "status": "error",
+            "message": error
+        })
+    });
 }
 
 module.exports.create = create;
 module.exports.calcSaldo = calcSaldo;
+module.exports.updateSaldo = updateSaldo;

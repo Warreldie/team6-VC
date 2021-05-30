@@ -1,5 +1,7 @@
 const baseUrl = "http://localhost:3000";
 
+let newSaldo;
+
 let getUser = () => {
     fetch(baseUrl + "/users/user", {
         'headers': {
@@ -27,8 +29,30 @@ let getSaldo = () => {
     }).then(result => {
         return result.json();
     }).then(json => {
+        newSaldo = json.data;
         let tokens = document.getElementById('tokens');
         tokens.innerHTML = json.data;
+        updateSaldo(newSaldo);
+    }).catch(err => {
+        console.log(err);
+    });
+}
+
+function updateSaldo(newSaldo){
+    let saldo = newSaldo;
+
+    fetch(baseUrl + "/transfers/updateSaldo", {
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
+        },
+        body: JSON.stringify({
+            "newSaldo": saldo
+        })
+    }).then(result => {
+        return result.json();
+    }).then(json => {
+        console.log(json)
     }).catch(err => {
         console.log(err);
     });

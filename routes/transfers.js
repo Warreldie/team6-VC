@@ -12,4 +12,6 @@ router.post('/create', passport.authenticate('jwt', {session: false}), transfers
 
 router.get('/saldo', passport.authenticate('jwt', {session: false}), transfersController.calcSaldo);
 
+router.post('/updateSaldo', passport.authenticate('jwt', {session: false}), transfersController.updateSaldo);
+
 module.exports = router;
