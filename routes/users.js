@@ -15,7 +15,7 @@ router.get('/login', function(req, res, next) {
   res.render('login', { title: 'coins. | Login' });
 });
 
-// router.post('/login', authController.signin);
+router.post('/login', authController.login);
 
 router.post('/search', usersController.search);
 
