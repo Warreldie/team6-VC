@@ -29,4 +29,9 @@ const search = async (req, res, next) => {
             })
 };
 
+const getUser = async(req, res) => {
+
+}
+
 module.exports.search = search;
+module.exports.getUser = getUser;

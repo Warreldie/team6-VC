@@ -17,6 +17,11 @@ router.get('/login', function(req, res, next) {
 
 router.post('/login', authController.login);
 
+// user search autocomplete
 router.post('/search', usersController.search);
+
+
+// get user
+router.get('/user', usersController.getUser);
 
 module.exports = router;
