@@ -47,12 +47,12 @@ const login = async (req, res, next) => {
             username: result.user.username
         }, config.get('jwt.secret'));
 
-        return res.json({
+    return res.json({
             "status": "success",
             "data": {
                 "token": token
             }
-        })
+    })
     }).catch(error => {
         res.json({
             "status": "error",

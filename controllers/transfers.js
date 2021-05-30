@@ -6,7 +6,7 @@ const create = async (req, res) => {
     let reason = req.body.reason;
     let message = req.body.message;
     let amount = req.body.amount;
-    
+
     const transfer = new Transfer({
         sender: sender,
         recipient: recipient,
@@ -27,8 +27,29 @@ const create = async (req, res) => {
     })
 };
 
-const calcSaldo = async(req, res) => {
-    // console.log(req.user);
+const calcSaldo = async (req, res) => {
+    console.log(req.user);
+    let username = req.user.username;
+
+    Transfer.find({
+        $or: [
+            { sender: username },
+            { recipient: username }
+        ]
+    }).then(result => {
+        console.log(result);
+
+        res.json({
+            'status': 'fetched',
+            'data': result
+        })
+    }).catch(error => {
+        res.json({
+            "status": "error",
+            "message": error
+        })
+    });
+
 
     // let search = {
     //     "$or": [{ "username": { "$regex": query, "$options": "i" } }]
@@ -36,7 +57,7 @@ const calcSaldo = async(req, res) => {
 
     // let output = [];
 
-    // User.find(search).limit(3);
+    // User.find(search).limit(3); 
 
     // return res.json({
     //     "status": "success",
